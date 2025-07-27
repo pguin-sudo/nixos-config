@@ -139,22 +139,6 @@
     tree
     sqlite
     xdg-utils # For xdg-open to work correctly system-wide
-
-    # Desktop applications available system-wide
-    xfce.xfce4-whiskermenu-plugin
-    thunderbird
-    mpv
-    ffmpeg # Often a system dependency for multimedia apps
-    audacious
-    adwaita-qt6
-    gimp3
-    libreoffice
-    simple-scan
-
-    # We do NOT need 'home-manager' in systemPackages anymore.
-    # The Flake (`flake.nix`) provides Home Manager and its modules during the build.
-    # The `home-manager` CLI tool will be available to user `blfnix` if you
-    # add `pkgs.home-manager` to their `home.packages` in `home.nix` (optional).
   ];
 
   # Define a user account. Don't forget to set a password with ‘passwd’.

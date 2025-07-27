@@ -33,6 +33,7 @@
     zathura
     tree
     wget
+    ffmpeg
 
     # For hyprland
     waybar
@@ -41,7 +42,7 @@
     libnotify
     swww
     kitty
-    wofi # or rofi-wayland
+    rofi-wayland
     kdePackages.dolphin
     networkmanagerapplet
     grim # screenshot utility
@@ -52,7 +53,9 @@
     # code
     obs-studio
     telegram-desktop
- 
+    mpv
+    discord
+    krita
   ];
 
   # --- ZSH CONFIGURATION ---
@@ -171,6 +174,11 @@
     enable = true;
     userEmail = "138515193+pguin-sudo@users.noreply.github.com";
     userName = "PGuin";
+  };
+
+  programs.vscode = {
+    enable = true;
+    extensions = with pkgs.vscode-extensions; [];
   };
 
   # --- MANAGING HELIX CONFIGURATION FILES ---
