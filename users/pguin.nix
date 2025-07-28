@@ -181,16 +181,12 @@
     extensions = with pkgs.vscode-extensions; [];
   };
 
-  # --- MANAGING HELIX CONFIGURATION FILES ---
-  xdg.configFile."helix/languages.toml" = {
-    source = ../dotfiles/helix/languages.toml; 
-  };
+  # --- MANAGING CONFIGURATION FILES ---
 
-  xdg.configFile."helix/config.toml" = {
-    source = ../dotfiles/helix/config.toml; 
+  home.file."${config.xdg.configHome}" = {
+    source = ../dotfiles;
+    recursive = true;
   };
-
-  # TODO: Add other config files
 
   # --- GLOBAL ENVIRONMENT VARIABLES ---
   home.sessionVariables = {
