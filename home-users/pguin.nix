@@ -1,12 +1,6 @@
 { pkgs, config, lib, inputs, ... }:
 
 {
-  imports = [
-    inputs.nix-colors.homeManagerModules.default
-  ];
-
-  colorScheme = inputs.nix-colors.colorSchemes.gruvbox-dark-medium;
-
   home.username = "pguin";
   home.homeDirectory = "/home/pguin";
   home.stateVersion = "25.05";
@@ -203,5 +197,5 @@
     CXX = "clang++";
     GIT_TERMINAL_PROMPT = "1";
     FZF_ALT_C_COMMAND = "fd --type d --hidden --follow --exclude .git";
-  };   
+  };
 }
