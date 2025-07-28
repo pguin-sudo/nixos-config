@@ -1,6 +1,12 @@
 { pkgs, config, lib, inputs, ... }:
 
 {
+  imports = [
+    inputs.nix-colors.homeManagerModules.default
+  ];
+
+  colorScheme = inputs.nix-colors.colorSchemes.gruvbox-dark-medium;
+
   home.username = "pguin";
   home.homeDirectory = "/home/pguin";
   home.stateVersion = "25.05";
