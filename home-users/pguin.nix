@@ -12,7 +12,6 @@
     zsh-autocomplete
 
     # Editors & LSPs
-    helix
     marksman
     ruff
     python313Packages.python-lsp-server
@@ -36,13 +35,10 @@
     ffmpeg
 
     # For hyprland
-    waybar
-    eww
     dunst
     libnotify
     swww
     kitty
-    rofi-wayland
     kdePackages.dolphin
     networkmanagerapplet
     grim # screenshot utility
@@ -53,7 +49,6 @@
     # code
     obs-studio
     telegram-desktop
-    mpv
     discord
     krita
   ];
@@ -150,14 +145,21 @@
   };
 
   # --- PROGRAM CONFIGURATIONS ---
+
+  # Terminal
   programs.starship.enable = true;
+  programs.alacritty.enable = true;
 
-  programs.firefox = {
-    enable = true;
-  };
-   
+  # CLI
+  programs.yt-dlp.enable = true;
+  programs.cava.enable = true;
+  programs.htop.enable = true;
   programs.helix.enable = true;
-
+  programs.git = {
+    enable = true;
+    userEmail = "138515193+pguin-sudo@users.noreply.github.com";
+    userName = "PGuin";
+  };
   programs.fzf = {
     enable = true;
     enableZshIntegration = true;
@@ -170,17 +172,22 @@
     ];
   };
 
-  programs.git = {
-    enable = true;
-    userEmail = "138515193+pguin-sudo@users.noreply.github.com";
-    userName = "PGuin";
-  };
 
+  # Hyprland
+  programs.waybar.enable = true;
+  programs.eww.enable = true;
+  programs.rofi.enable = true;
+
+  # Apps
+  programs.mpv.enable = true;
+  programs.firefox = {
+    enable = true;
+  };
   programs.vscode = {
     enable = true;
     extensions = with pkgs.vscode-extensions; [];
   };
-
+  
   # --- MANAGING CONFIGURATION FILES ---
 
   home.file."${config.xdg.configHome}" = {
