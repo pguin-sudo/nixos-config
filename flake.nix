@@ -41,7 +41,7 @@
             home-manager.extraSpecialArgs = { inherit inputs; };
 
             # --- ADDED THIS LINE TO HANDLE EXISTING USER CONFIGURATION FILES ---
-            home-manager.backupFileExtension = "hm-bak"; # Or "backup", or any extension you prefer
+            home-manager.backupFileExtension = "hm-backup"; # Or "backup", or any extension you prefer
 
             # Define your user and point to their Home Manager configuration
             home-manager.users.pguin = import ./users/pguin.nix;
